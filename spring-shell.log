@@ -39,3 +39,4 @@
 1695920430946:mqtool -text push -q queueF -p "C:\\\\Users\\\\ndedi.patrick.nkollo\\\\Downloads\\\\rabbitshellcopy\\\\rabbitshell\\\\src\\\\main\\\\resources\\\\filetext.txt"
 1695923645816:mqtool -csv push -q queueF -p "C:\\\\Users\\\\ndedi.patrick.nkollo\\\\Downloads\\\\rabbitshellcopy\\\\rabbitshell\\\\src\\\\main\\\\resources\\\\filetext.txt"
 1695923706076:mqtool -text push -q queueF -p "C:\\\\Users\\\\ndedi.patrick.nkollo\\\\Downloads\\\\rabbitshellcopy\\\\rabbitshell\\\\src\\\\main\\\\resources\\\\filetext.txt"
+1695934300101:mqtool push -m youyou -q queueF

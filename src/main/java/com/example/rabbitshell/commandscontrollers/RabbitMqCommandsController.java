@@ -1,9 +1,6 @@
 package com.example.rabbitshell.commandscontrollers;
 
 import com.example.rabbitshell.services.RabbitsMQService;
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.ConnectionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +11,6 @@ import org.springframework.shell.standard.ShellOption;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.List;
-import java.util.concurrent.TimeoutException;
 
 @ShellComponent
 public class RabbitMqCommandsController {
