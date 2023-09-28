@@ -86,3 +86,4 @@ public class FromDBToRabbitMQService {
         return "message published!";
     }
 }
+

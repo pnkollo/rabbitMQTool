@@ -16,3 +16,26 @@
 1695861344637:mqtool move -s queueA -t shellqueue -re nko
 1695891577138:mqtool create -q queueC
 1695891690569:mqtool create -q queueD
+1695903881847:mqtool -help
+1695904525890:njpeor
+1695904540335:mqtool -help
+1695904613215:hoofklg
+1695904621152:mqtool -help
+1695913367249:mqtool file push -q queueC -path filetext.txt
+1695914063865:mqtool file push -q queueC -path filetext
+1695914074599:mqtool file push -q queueC -path filetext.txt
+1695914245471:mqtool file push -q queueC -pa filetext.txt
+1695914271107:mqtool file push -q queueC -pa filetext
+1695914347229:mqtool file push -q queueC -pa src\\main\\resourcesfiletext.txt
+1695914427842:mqtool file push -q queueC -pa C:\\Users\\ndedi.patrick.nkollo\\Downloads\\rabbitshellcopy\\rabbitshell\\src\\main\\resources\\filetext.txt
+1695914593690:mqtool file push -q queueC -pa  C:\\\\Users\\\\ndedi.patrick.nkollo\\\\Downloads\\\\rabbitshellcopy\\\\rabbitshell\\\\src\\\\main\\\\resources\\\\filetext.txt
+1695914643557:mqtool file push -q queueC -pa  \\\\src\\\\main\\\\resources\\\\filetext.txt
+1695918768886:mqtoo create -q queueF
+1695918783753:mqtool create -q queueF
+1695919435669:mqtool -text push -q queueF -path  C:\\Users\\ndedi.patrick.nkollo\\Downloads\\rabbitshellcopy\\rabbitshell\\src\\main\\resources\\filetext.txt
+1695919982725:mqtool -text push -q queueF -pa  C:\\Users\\ndedi.patrick.nkollo\\Downloads\\rabbitshellcopy\\rabbitshell\\src\\main\\resources\\filetext.txt
+1695920122444:mqtool -text push -q queueF -pa  "C:\\Users\\ndedi.patrick.nkollo\\Downloads\\rabbitshellcopy\\rabbitshell\\src\\main\\resources\\filetext.txt"
+1695920182773:mqtool -text push -q queueF -pa  "C:\\\\Users\\\\ndedi.patrick.nkollo\\\\Downloads\\\\rabbitshellcopy\\\\rabbitshell\\\\src\\\\main\\\\resources\\\\filetext.txt"
+1695920430946:mqtool -text push -q queueF -p "C:\\\\Users\\\\ndedi.patrick.nkollo\\\\Downloads\\\\rabbitshellcopy\\\\rabbitshell\\\\src\\\\main\\\\resources\\\\filetext.txt"
+1695923645816:mqtool -csv push -q queueF -p "C:\\\\Users\\\\ndedi.patrick.nkollo\\\\Downloads\\\\rabbitshellcopy\\\\rabbitshell\\\\src\\\\main\\\\resources\\\\filetext.txt"
+1695923706076:mqtool -text push -q queueF -p "C:\\\\Users\\\\ndedi.patrick.nkollo\\\\Downloads\\\\rabbitshellcopy\\\\rabbitshell\\\\src\\\\main\\\\resources\\\\filetext.txt"
