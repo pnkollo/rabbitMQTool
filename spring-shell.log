@@ -1,0 +1,18 @@
+1695850893560:nkol
+1695852390292:mqtool push me message -msg:"lool" -queue:"myqueue"
+1695853224395:mqtool push -msg hello -queue shellqueue
+1695853318715:mqtool push -msg -queue shellqueue
+1695853336839:mqtool push -msg hello -queue shellqueue
+1695854834542:mqtool push -m hello -q shellqueue
+1695855709448:mqtool create  -q queueA
+1695856501872:mqtool move-message -s shellqueue -t queueA
+1695858424533:mqtool -ls
+1695859707012:mqtool consume -q queueA
+1695859780002:shell:>En attente de messages. Pour quitter, appuyez sur CTRL+C
+1695859798902:mqtool consume -q queueA
+1695859977277:mqtool -ls
+1695860004422:mqtool consume -q shellqueue
+1695861272797:mqtool push -m nkollo -q queueA
+1695861344637:mqtool move -s queueA -t shellqueue -re nko
+1695891577138:mqtool create -q queueC
+1695891690569:mqtool create -q queueD
