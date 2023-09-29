@@ -7,3 +7,5 @@ INSERT INTO Message ( content)VALUES ('sanjana lyyappan');
 INSERT INTO Message ( content)VALUES ('laxmi tiwari');
 INSERT INTO Message ( content)VALUES ('sayili nehete');
 INSERT INTO Message ( content)VALUES ('stilianos katsaros');
+INSERT INTO Message ( content)VALUES ('chantal bramer');
+INSERT INTO Message ( content)VALUES ('sarah kallenbach');
