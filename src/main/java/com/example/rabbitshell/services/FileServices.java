@@ -23,6 +23,12 @@ public class FileServices {
 
     private Logger logger = LoggerFactory.getLogger(RabbitsMQService.class);
 
+    /**
+     *
+     * @param queueName the name of the queue the message(s) should be sent
+     * @param filePath  the (absolute) path of the file (.txt) from where the message(s) come (don't forget the double back slashs)
+     * @return    the notification that the message has been sent
+     */
     public String readFileInTextFormat(String queueName, String filePath) {
 
         try {
@@ -36,7 +42,7 @@ public class FileServices {
                 String message = readTextFile(filePath);
                 channel.queueDeclare(queueName, false, false, false, null);
                 channel.basicPublish("", queueName, null, message.getBytes());
-                logger.info("Message publié dans la queue A : {}" , message);
+                logger.info("Message publié dans la queue  : {}" , message);
             }
         }
         catch (IOException | TimeoutException e) {
@@ -44,6 +50,13 @@ public class FileServices {
         }
         return "message published!";
     }
+
+    /**
+     *
+     * @param queueName the name of the queue the message(s) should be sent
+     * @param filePath  the (absolute) path of the file (.csv) from where the message(s) come (don't forget the double back slashs)
+     * @return    the notification that the message has been sent
+     */
 
     public String readFileInCsvFormat(String queueName, String filePath) {
 
@@ -58,7 +71,7 @@ public class FileServices {
                 String message = readFileInCsvFormat(filePath);
                 channel.queueDeclare(queueName, false, false, false, null);
                 channel.basicPublish("", queueName, null, message.getBytes());
-                logger.info("Message publié dans la queue A : {}" , message);
+                logger.info("Message publié dans la queue  : {}" , message);
             }
         }
         catch (IOException | TimeoutException e) {
@@ -106,5 +119,42 @@ public class FileServices {
             e.printStackTrace();
         }
         return result;
+    }
+
+    /**
+     *
+     * @param queueName the name of the queue the message(s) should be sent
+     * @param filePath  the (absolute) path of the file (.csv) from where the message(s) come (don't forget the double back slashs)
+     *                  the message(s) are sent individually in this case
+     * @return    the notification that the message has been sent
+     */
+    public String readFileInCsvFormat2(String queueName, String filePath) {
+
+        try {
+            ConnectionFactory factory = new ConnectionFactory();
+            factory.setHost("localhost"); // Adresse du serveur RabbitMQ
+
+            // Publier un message dans la queue A
+            try (Connection connection = factory.newConnection();
+                 Channel channel = connection.createChannel(); Reader reader = new FileReader(filePath);
+                 CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT) ) {
+
+                for (CSVRecord record : csvParser) {
+                    // Vous pouvez accéder aux champs de chaque ligne ici
+                    String message = record.get(0); // Le premier champ
+                    //String champ2 = record.get(1); // Le deuxième champ, etc.
+
+                    channel.queueDeclare(queueName, false, false, false, null);
+                    channel.basicPublish("", queueName, null, message.getBytes());
+                    logger.info("Message publié dans la queue  : {}" , message);
+                }
+
+            }
+        }
+        catch (IOException | TimeoutException e) {
+            e.printStackTrace();
+        }
+        return "message published!";
+
     }
 }

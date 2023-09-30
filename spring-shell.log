@@ -40,3 +40,12 @@
 1695923645816:mqtool -csv push -q queueF -p "C:\\\\Users\\\\ndedi.patrick.nkollo\\\\Downloads\\\\rabbitshellcopy\\\\rabbitshell\\\\src\\\\main\\\\resources\\\\filetext.txt"
 1695923706076:mqtool -text push -q queueF -p "C:\\\\Users\\\\ndedi.patrick.nkollo\\\\Downloads\\\\rabbitshellcopy\\\\rabbitshell\\\\src\\\\main\\\\resources\\\\filetext.txt"
 1695934300101:mqtool push -m youyou -q queueF
+1695976166590:help
+1695976600159:mqtool create -q queueN
+1695976775283:mqtool -text push -q queueN -p "C:\\\\Users\\\\ndedi.patrick.nkollo\\\\Downloads\\\\rabbitshellcopy\\\\rabbitshell\\\\src\\\\main\\\\resources\\\\filetext.txt"
+1696060686760:mqtool csv -individual -q queueF -p "C:\\Users\\ndedi.patrick.nkollo\\Downloads\\rabbitshellcopy\\rabbitshell\\src\\main\\resources\\mycsv.csv"
+1696060849504:mqtool -text push -q queueF -p "C:\\Users\\ndedi.patrick.nkollo\\Downloads\\rabbitshellcopy\\rabbitshell\\src\\main\\resources\\filetext.txt"
+1696061149696:shell:>2023-09-30T10:00:49.525+02:00  INFO 24120 --- [           main] c.e.r.services.RabbitsMQService          : Message publié dans la queue  :
+1696061176794:mqtool -text push -q queueF -p C:\\Users\\ndedi.patrick.nkollo\\Downloads\\rabbitshellcopy\\rabbitshell\\src\\main\\resources\\filetext.txt
+1696061239928:mqtool -text push -q queueF -p "C:\\\\Users\\\\ndedi.patrick.nkollo\\\\Downloads\\\\rabbitshellcopy\\\\rabbitshell\\\\src\\\\main\\\\resources\\\\filetext.txt"
+1696061267775:mqtool csv -individual -q queueF -p "C:\\\\Users\\\\ndedi.patrick.nkollo\\\\Downloads\\\\rabbitshellcopy\\\\rabbitshell\\\\src\\\\main\\\\resources\\\\mycsv.csv"

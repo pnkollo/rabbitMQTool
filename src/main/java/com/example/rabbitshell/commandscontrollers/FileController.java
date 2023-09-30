@@ -24,6 +24,10 @@ public class FileController {
         fileServices.readFileInCsvFormat(queueName, filePath);
     }
 
+    @ShellMethod(key = "mqtool csv -individual" , value = "me message")
+    public String readFileInCsvFormat2(@ShellOption("-q") String queueName, @ShellOption("-p") String filePath){
+        return fileServices.readFileInCsvFormat2(queueName, filePath);
+    }
 }
 
 
