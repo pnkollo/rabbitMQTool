@@ -49,3 +49,19 @@
 1696061176794:mqtool -text push -q queueF -p C:\\Users\\ndedi.patrick.nkollo\\Downloads\\rabbitshellcopy\\rabbitshell\\src\\main\\resources\\filetext.txt
 1696061239928:mqtool -text push -q queueF -p "C:\\\\Users\\\\ndedi.patrick.nkollo\\\\Downloads\\\\rabbitshellcopy\\\\rabbitshell\\\\src\\\\main\\\\resources\\\\filetext.txt"
 1696061267775:mqtool csv -individual -q queueF -p "C:\\\\Users\\\\ndedi.patrick.nkollo\\\\Downloads\\\\rabbitshellcopy\\\\rabbitshell\\\\src\\\\main\\\\resources\\\\mycsv.csv"
+1696063989768:claer
+1696063993109:clear
+1696064008548:exit
+1696064464034:mmm
+1696064542433:mqtoo -help
+1696064550279:mqtool -help
+1696080978096:mqtool create -q queueD
+1696081929325:help
+1696082302237:user-list
+1696092815581:mqtool create -q queueB
+1696094449794:mqtool create -q queueH
+1696111712552:mqtool create -q myQ1
+1696196251789:fgh
+1696196263479:mqtool -help
+1696196268240:help
+1696838658266:mqtool create -q MyQueueA

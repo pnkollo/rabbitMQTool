@@ -1,9 +1,15 @@
 package com.example.rabbitshell.services;
 
+import com.example.rabbitshell.entities.Cliuser;
+import com.example.rabbitshell.repositories.CliUserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class HelpOptionsService {
+
+    @Autowired
+    private CliUserRepository cliUserRepository;
 
     public String getHelpOptions(){
         return "the most popular commands are \n" +
@@ -18,5 +24,10 @@ public class HelpOptionsService {
                 "-t            for the target queue \n" +
                 "-ls           to have the list of names of all the queues on rabbitMQ \n" +
                 "consume       to consume a message";
+    }
+
+
+    public Cliuser findByUsername(String username){
+        return cliUserRepository.findByUsername(username);
     }
 }
